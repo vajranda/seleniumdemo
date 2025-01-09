@@ -46,6 +46,10 @@ public class Checkoutpage extends abstractComponent {
 
 		Orderconfimation orderconfirmation = new Orderconfimation(driver);
 		return orderconfirmation;
+		
+		System.out.println("yes");
+		System.out.println("No");
+		
 
 	}
 
