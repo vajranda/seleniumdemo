@@ -47,8 +47,20 @@ public class Checkoutpage extends abstractComponent {
 		Orderconfimation orderconfirmation = new Orderconfimation(driver);
 		return orderconfirmation;
 		
-		System.out.println("yes");
-		System.out.println("No");
+	
+		
+
+	}
+	
+	public Orderconfimation placeonTheOrder() {
+
+		Actions a = new Actions(driver);
+		a.moveToElement(placeOrderButton).click().build().perform();
+
+		Orderconfimation orderconfirmation = new Orderconfimation(driver);
+		return orderconfirmation;
+		
+	
 		
 
 	}
