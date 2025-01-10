@@ -125,5 +125,18 @@ public class Basetest {
 		return System.getProperty("user.dir") + "//reports//" + testcase + ".png";
 
 	}
+	
+	public String getScreenshotof(String testcase, WebDriver driver) throws IOException {
+
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testcase + ".png");
+
+		FileUtils.copyFile(src, file);
+
+		return System.getProperty("user.dir") + "//reports//" + testcase + ".png";
+
+	}
 
 }
